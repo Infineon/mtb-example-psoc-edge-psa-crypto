@@ -1,0 +1,6 @@
+# A ModusToolbox application may contain exactly one PSA Crypto
+# implementation. This application uses ifx-tf-psa-crypto, built by the
+# ifx-tf-psa-port library, so the copy of TF-PSA-Crypto that is bundled inside
+# the Mbed TLS 4.x checkout must stay out of the build. Otherwise every
+# psa_* symbol is defined twice at link time.
+$(SEARCH_mbedtls)/tf-psa-crypto
